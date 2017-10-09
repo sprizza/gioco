@@ -27,7 +27,7 @@ m_gioco = pygame.mixer.Sound('inizio.wav')
 cattura = pygame.mixer.Sound('cattura1.wav')
 
 # avviso
-avviso = pygame.mixer.Sound('avviso.wav')
+#avviso = pygame.mixer.Sound('avviso.wav')
 
 # suono collisione muro
 preso = pygame.mixer.Sound('preso3.wav')
@@ -39,7 +39,7 @@ schianto = pygame.mixer.Sound('uscita1.wav')
 lapide = pygame.mixer.Sound('morte6.wav')
 
 # suono record
-applauso = pygame.mixer.Sound('allarme1.wav')
+#applauso = pygame.mixer.Sound('allarme1.wav')
 
 # aggiungo lo sfondo
 sfondo = pygame.image.load('sfondo4.jpg')

@@ -1,9 +1,8 @@
 #!/usr/bin/python
 # coding=utf-8
 
-import pygame
 import random
-
+import pygame
 
 # colori (rosso, verde, blu, ecc..)
 
@@ -56,6 +55,9 @@ sfondo2 = pygame.image.load('seleziona.jpg')
 # qui si inserisce il titolo nello schermo gioco
 pygame.display.set_caption('SE MI FAI MANGIARE ......ATTENTO...........')
 
+# immagine tranello
+immagine25 = pygame.image.load('attenzione.png')
+
 # immagine giocatore
 immagine = pygame.image.load('giocatore.png')
 immagine1 = pygame.image.load('prendimi3.png')
@@ -74,7 +76,14 @@ immagine13 = pygame.image.load('prendimi15.png')
 immagine14 = pygame.image.load('prendimi16.png')
 immagine15 = pygame.image.load('prendimi17.png')
 immagine16 = pygame.image.load('prendimi18.png')
-
+immagine17 = pygame.image.load('prendimi19.png')
+immagine18 = pygame.image.load('prendimi20.png')
+immagine19 = pygame.image.load('prendimi21.png')
+immagine20 = pygame.image.load('prendimi22.png')
+immagine21 = pygame.image.load('prendimi23.png')
+immagine22 = pygame.image.load('prendimi24.png')
+immagine23 = pygame.image.load('prendimi25.png')
+immagine24 = pygame.image.load('prendimi26.png')
 # immagine tranello 1
 cratere1 = pygame.image.load('morte2.png')
 
@@ -89,7 +98,6 @@ simpatica = pygame.image.load('simpatica.png')
 simpatica1 = pygame.image.load('teschio2.png')
 simpatica2 = pygame.image.load('teschio2.png')
 simpatica3 = pygame.image.load('simpatica3.png')
-#simpatica4 = pygame.image.load('simpatica5.png')
 simpatica5 = pygame.image.load('simpatica2.png')
 
 # palla che ti corre dietro
@@ -200,7 +208,6 @@ def rompi():
     schermo.blit(simpatica1, [x1, y1])
     schermo.blit(simpatica2, [y2, x2])
     schermo.blit(simpatica3, [y3, x3])
-    #schermo.blit(simpatica4, [y4, x4])
     schermo.blit(simpatica5, [x7, y7])
     schermo.blit(nerone, [x5, y5])
     schermo.blit(nerone1, [x6, y6])
@@ -260,7 +267,7 @@ def ostacolo(xl, yl, xs, ys):
 
 # salvataggio punteggio
 def Punteggio(listainizio):
-    global record
+    global record, vita
     testo = grandeFont.render('Punteggio: %d' % (listainizio - 1), True, giallo)
     schermo.blit(testo, [infoObject.current_w / 2 - 150, 0])
     record_file = open("FileGioco.txt", "r")
@@ -268,9 +275,9 @@ def Punteggio(listainizio):
     record_file.close()
     testo1 = grandeFont.render('Record: %d' % (record), True, blu)
     schermo.blit(testo1, [infoObject.current_w / 2 - 150, 50])
-
+    testo2 = grandeFont.render('Vita: %s' % (vita), True, giallo)
+    schermo.blit(testo2, [infoObject.current_w / 1.3 - 150, 50])
     if listainizio-1 > record:
-        applauso.play()
         record_file = open("FileGioco.txt", "w")
         record_file.write('\n' + str(listainizio - 1))
         record_file.close()
@@ -322,7 +329,7 @@ def messagioSchermo(msg, color, margine_y=0, size='piccolo'):
 def inizio():
     global pausa, x, y, vx, vy, x1, y1, vx1, vy1, x2, y2, vx2, vy2, x3, y3, vx3, vy3, x4, y4, vx4, vy4, x5, y5, \
         x_posizione, x_posizione1, x6, y6, x7, y7, vx7, vy7, testa, xl0, yl0, xs0, ys0, xl1, yl1, xs1, ys1, \
-        xl2, yl2, xs2, ys2, xl3, yl3, xs3, ys3, record
+        xl2, yl2, xs2, ys2, xl3, yl3, xs3, ys3, record, vita
     global direzione, xl, ys, xl11, yl11, xs11, ys11, x14, y14, x13, y13, x11, y11, x12, y12
     gioco = False
     gameOver = False
@@ -393,6 +400,24 @@ def inizio():
     # nemico 16
     nemicox16 = round(random.randrange(0, infoObject.current_w - oggetto_n) / oggetto_n) * oggetto_n
     nemicoy16 = round(random.randrange(0, infoObject.current_h - oggetto_n) / oggetto_n) * oggetto_n
+    nemicox17 = round(random.randrange(0, infoObject.current_w - oggetto_n) / oggetto_n) * oggetto_n
+    nemicoy17 = round(random.randrange(0, infoObject.current_h - oggetto_n) / oggetto_n) * oggetto_n
+    nemicox18 = round(random.randrange(0, infoObject.current_w - oggetto_n) / oggetto_n) * oggetto_n
+    nemicoy18 = round(random.randrange(0, infoObject.current_h - oggetto_n) / oggetto_n) * oggetto_n
+    nemicox19 = round(random.randrange(0, infoObject.current_w - oggetto_n) / oggetto_n) * oggetto_n
+    nemicoy19 = round(random.randrange(0, infoObject.current_h - oggetto_n) / oggetto_n) * oggetto_n
+    nemicox20 = round(random.randrange(0, infoObject.current_w - oggetto_n) / oggetto_n) * oggetto_n
+    nemicoy20 = round(random.randrange(0, infoObject.current_h - oggetto_n) / oggetto_n) * oggetto_n
+    nemicox21 = round(random.randrange(0, infoObject.current_w - oggetto_n) / oggetto_n) * oggetto_n
+    nemicoy21 = round(random.randrange(0, infoObject.current_h - oggetto_n) / oggetto_n) * oggetto_n
+    nemicox22 = round(random.randrange(0, infoObject.current_w - oggetto_n) / oggetto_n) * oggetto_n
+    nemicoy22 = round(random.randrange(0, infoObject.current_h - oggetto_n) / oggetto_n) * oggetto_n
+    nemicox23 = round(random.randrange(0, infoObject.current_w - oggetto_n) / oggetto_n) * oggetto_n
+    nemicoy23 = round(random.randrange(0, infoObject.current_h - oggetto_n) / oggetto_n) * oggetto_n
+    nemicox24 = round(random.randrange(0, infoObject.current_w - oggetto_n) / oggetto_n) * oggetto_n
+    nemicoy24 = round(random.randrange(0, infoObject.current_h - oggetto_n) / oggetto_n) * oggetto_n
+    nemicox25 = round(random.randrange(0, infoObject.current_w - oggetto_n) / oggetto_n) * oggetto_n
+    nemicoy25 = round(random.randrange(0, infoObject.current_h - oggetto_n) / oggetto_n) * oggetto_n
 
     # cratere 1
     craterex1 = round(random.randrange(0, infoObject.current_w - gran_c) / gran_c) * gran_c
@@ -411,6 +436,7 @@ def inizio():
     main_y_change = 0
     lista = []
     listainizio = 1
+    vita = 3
 
     # il ciclo while cattura gli eventi tramite event
     while not gioco:
@@ -482,46 +508,32 @@ def inizio():
         main_y += main_y_change
         schermo.blit(sfondo, [0, 0])
 
-        # nemico 1
+        # nemico
         schermo.blit(immagine1, [nemicox, nemicoy, oggetto_n, oggetto_n])
-
-        # nemico 2
         schermo.blit(immagine2, [nemicox2, nemicoy2, oggetto_n, oggetto_n])
-
-        # nemico 3
         schermo.blit(immagine3, [nemicox3, nemicoy3, oggetto_n, oggetto_n])
-
-        # nemico 4
         schermo.blit(immagine4, [nemicox4, nemicoy4, oggetto_n, oggetto_n])
-
-        # nemico 5
         schermo.blit(immagine5, [nemicox5, nemicoy5, oggetto_n, oggetto_n])
-
-        # nemico 6
         schermo.blit(immagine6, [nemicox6, nemicoy6, oggetto_n, oggetto_n])
-
-        # nemico 9
-        if len(lista) >= 8:
-            schermo.blit(immagine7, [nemicox9, nemicoy9, oggetto_n, oggetto_n])
-
-        # nemico 10
-        if len(lista) >= 10:
-            schermo.blit(immagine8, [nemicox10, nemicoy10, oggetto_n, oggetto_n])
-
-        # nemico 11
-        if len(lista) >= 15:
-            schermo.blit(immagine11, [nemicox11, nemicoy11, oggetto_n, oggetto_n])
-
-        # nemico 12 13 14
-        if len(lista) >= 20:
-            schermo.blit(immagine12, [nemicox12, nemicoy12, oggetto_n, oggetto_n])
-            schermo.blit(immagine13, [nemicox13, nemicoy13, oggetto_n, oggetto_n])
-            schermo.blit(immagine14, [nemicox14, nemicoy14, oggetto_n, oggetto_n])
-
-        # nemico 15 16
-        if len(lista) >= 25:
-            schermo.blit(immagine15, [nemicox15, nemicoy15, oggetto_n, oggetto_n])
-            schermo.blit(immagine16, [nemicox16, nemicoy16, oggetto_n, oggetto_n])
+        schermo.blit(immagine7, [nemicox9, nemicoy9, oggetto_n, oggetto_n])
+        schermo.blit(immagine8, [nemicox10, nemicoy10, oggetto_n, oggetto_n])
+        schermo.blit(immagine9, [nemicox7, nemicoy7, oggetto_n, oggetto_n])
+        schermo.blit(immagine10, [nemicox8, nemicoy8, oggetto_n, oggetto_n])
+        schermo.blit(immagine11, [nemicox11, nemicoy11, oggetto_n, oggetto_n])
+        schermo.blit(immagine12, [nemicox12, nemicoy12, oggetto_n, oggetto_n])
+        schermo.blit(immagine13, [nemicox13, nemicoy13, oggetto_n, oggetto_n])
+        schermo.blit(immagine14, [nemicox14, nemicoy14, oggetto_n, oggetto_n])
+        schermo.blit(immagine15, [nemicox15, nemicoy15, oggetto_n, oggetto_n])
+        schermo.blit(immagine16, [nemicox16, nemicoy16, oggetto_n, oggetto_n])
+        schermo.blit(immagine17, [nemicox17, nemicoy17, oggetto_n, oggetto_n])
+        schermo.blit(immagine18, [nemicox18, nemicoy18, oggetto_n, oggetto_n])
+        schermo.blit(immagine19, [nemicox19, nemicoy19, oggetto_n, oggetto_n])
+        schermo.blit(immagine20, [nemicox20, nemicoy20, oggetto_n, oggetto_n])
+        schermo.blit(immagine21, [nemicox21, nemicoy21, oggetto_n, oggetto_n])
+        schermo.blit(immagine22, [nemicox22, nemicoy22, oggetto_n, oggetto_n])
+        schermo.blit(immagine23, [nemicox23, nemicoy23, oggetto_n, oggetto_n])
+        schermo.blit(immagine24, [nemicox24, nemicoy24, oggetto_n, oggetto_n])
+        schermo.blit(immagine25, [nemicox25, nemicoy25, oggetto_n, oggetto_n])
 
         # nemico strano 7
         schermo.blit(immagine9, [nemicox7, nemicoy7, oggetto_n, oggetto_n])
@@ -544,10 +556,10 @@ def inizio():
                             lapide.play()
                             listainizio -= 1
                             lista.remove(testa)
-                            if listainizio == 0:
-                                m_gioco.stop()
-                                lapide.play()
+                            if vita <= 0:
                                 gameOver = True
+                            elif listainizio - 1 <= 0:
+                                vita -= 1
 
         # cratere 2
         schermo.blit(cratere2, [craterex2, craterey2, gran_c, gran_c])
@@ -563,10 +575,10 @@ def inizio():
                             lapide.play()
                             listainizio -= 1
                             lista.remove(testa)
-                            if listainizio == 0:
-                                m_gioco.stop()
-                                lapide.play()
+                            if vita <= 0:
                                 gameOver = True
+                            elif listainizio - 1 <= 0:
+                                vita -= 1
 
         # cratere 3
         schermo.blit(cratere3, [craterex3, craterey3, gran_c, gran_c])
@@ -582,10 +594,10 @@ def inizio():
                             lapide.play()
                             listainizio -= 1
                             lista.remove(testa)
-                            if listainizio == 0:
-                                m_gioco.stop()
-                                lapide.play()
+                            if vita <= 0:
                                 gameOver = True
+                            elif listainizio - 1 <= 0:
+                                vita -= 1
 
         # giocatore
         testa = []
@@ -597,7 +609,7 @@ def inizio():
             del lista[0]
 
         # il vermicello non puo toccarsi
-        for iniziolista in lista[:-1]:
+        for iniziolista in lista[:-50]:
             if iniziolista == testa:
                 m_gioco.stop()
                 lapide.play()
@@ -660,7 +672,7 @@ def inizio():
                                 vy = -16
         if y < 3:
             vy = 2
-            if len(lista) >= 14:
+            if len(lista) >= 12:
                 vy = 4
                 if len(lista) >= 15:
                     vy = 6
@@ -681,11 +693,10 @@ def inizio():
                             lapide.play()
                             listainizio -= 1
                             lista.remove(testa)
-                            if listainizio == 0:
-                                m_gioco.stop()
-                                lapide.play()
+                            if vita <= 0:
                                 gameOver = True
-
+                            elif listainizio - 1 <= 0:
+                                vita -= 1
         # movimento palla 7
         if len(lista) >= 25:
             x7 += vx7
@@ -718,10 +729,10 @@ def inizio():
                                 lapide.play()
                                 listainizio -= 1
                                 lista.remove(testa)
-                                if listainizio == 0:
-                                    m_gioco.stop()
-                                    lapide.play()
+                                if vita <= 0:
                                     gameOver = True
+                                elif listainizio - 1 <= 0:
+                                    vita -= 1
 
         # movimento palla 1
         if len(lista) >= 50:
@@ -764,7 +775,10 @@ def inizio():
                             if (main_y + oggetto >= y1) and (main_y + oggetto <= y1 + palla):
                                 m_gioco.stop()
                                 lapide.play()
-                                gameOver = True
+                                if vita <= 0:
+                                    gameOver = True
+                                elif listainizio - 1 <= 0:
+                                    vita -= 1
 
         # movimento palla 2
         if len(lista) >= 40:
@@ -813,7 +827,10 @@ def inizio():
                             if (main_y + oggetto >= x2) and (main_y + oggetto <= x2 + palla):
                                 m_gioco.stop()
                                 lapide.play()
-                                gameOver = True
+                                if vita <= 0:
+                                    gameOver = True
+                                elif listainizio - 1 <= 0:
+                                    vita -= 1
 
         # movimento palla 3
         if len(lista) >= 3:
@@ -858,7 +875,10 @@ def inizio():
                                 if listainizio == 0:
                                     m_gioco.stop()
                                     lapide.play()
-                                    gameOver = True
+                                    if vita <= 0:
+                                        gameOver = True
+                                    elif listainizio - 1 <= 0:
+                                        vita -= 1
 
         # movimento palla 4
         if len(lista) >= 4:
@@ -900,10 +920,10 @@ def inizio():
                                 lapide.play()
                                 listainizio -= 1
                                 lista.remove(testa)
-                                if listainizio == 0:
-                                    m_gioco.stop()
-                                    lapide.play()
+                                if vita <= 0:
                                     gameOver = True
+                                elif listainizio - 1 <= 0:
+                                    vita -= 1
 
         # movimento palla che ti corre dietro con variabili di velocita
         if len(lista) >= 1:
@@ -961,7 +981,10 @@ def inizio():
                                 if listainizio == 0:
                                     m_gioco.stop()
                                     lapide.play()
-                                    gameOver = True
+                                    if vita <= 0:
+                                        gameOver = True
+                                    elif listainizio - 1 <= 0:
+                                        vita -= 1
 
         # movimento palla che ti corre dietro con variabili di velocita
         if len(lista) >= 2:
@@ -1028,7 +1051,10 @@ def inizio():
                             if (main_y + oggetto >= y5) and (main_y + oggetto <= y5 + palla1):
                                 m_gioco.stop()
                                 lapide.play()
-                                gameOver = True
+                                if vita <= 0:
+                                    gameOver = True
+                                elif listainizio - 1 <= 0:
+                                    vita -= 1
 
         # movimento muro (ostacolo)
         if len(lista) >= 22:
@@ -1040,11 +1066,17 @@ def inizio():
             if main_x + 15 >= xl and main_y + 15 <= ys and main_x - 15 <= xs + xl:
                 m_gioco.stop()
                 preso.play()
-                gameOver = True
+                if vita <= 0:
+                    gameOver = True
+                elif listainizio - 1 <= 0:
+                    vita -= 1
             if main_x + 15 >= xl and main_y + 15 >= ys + spazio and main_x - 15 <= xs + xl:
                 m_gioco.stop()
                 preso.play()
-                gameOver = True
+                if vita <= 0:
+                    gameOver = True
+                elif listainizio - 1 <= 0:
+                    vita -= 1
 
         # muri strani
         if y11 < -x12:
@@ -1485,6 +1517,157 @@ def inizio():
                             craterey2 = round(random.randrange(0, infoObject.current_h - gran_c) / gran_c) * gran_c
                             craterex3 = round(random.randrange(0, infoObject.current_w - gran_c) / gran_c) * gran_c
                             craterey3 = round(random.randrange(0, infoObject.current_h - gran_c) / gran_c) * gran_c
+                            # collisione nemico 17
+            if len(lista) > 0:
+                if (main_x >= nemicox17) and (main_x <= nemicox17 + oggetto_n) or (main_x + oggetto >= nemicox17) and (
+                                main_x + oggetto <= nemicox17 + oggetto_n):
+                    if (main_y >= nemicoy17) and (main_y <= nemicoy17 + oggetto_n) or (
+                            main_y + oggetto >= nemicoy17) and (
+                                    main_y + oggetto <= nemicoy17 + oggetto_n):
+                        if (main_x + oggetto >= nemicox17) and (main_x + oggetto <= nemicox17 + oggetto_n):
+                            if (main_y + oggetto >= nemicoy17) and (main_y + oggetto <= nemicoy17 + oggetto_n):
+                                cattura.play()
+                                nemicox17 = round(
+                                    random.randrange(0, infoObject.current_w - oggetto_n) / oggetto_n) * oggetto_n
+                                nemicoy17 = round(
+                                    random.randrange(0, infoObject.current_h - oggetto_n) / oggetto_n) * oggetto_n
+                                listainizio += 1
+
+                                # collisione nemico 18
+            if len(lista) > 0:
+                if (main_x >= nemicox18) and (main_x <= nemicox18 + oggetto_n) or (main_x + oggetto >= nemicox18) and (
+                                main_x + oggetto <= nemicox18 + oggetto_n):
+                    if (main_y >= nemicoy18) and (main_y <= nemicoy18 + oggetto_n) or (
+                            main_y + oggetto >= nemicoy18) and (
+                                    main_y + oggetto <= nemicoy18 + oggetto_n):
+                        if (main_x + oggetto >= nemicox18) and (main_x + oggetto <= nemicox18 + oggetto_n):
+                            if (main_y + oggetto >= nemicoy18) and (main_y + oggetto <= nemicoy18 + oggetto_n):
+                                cattura.play()
+                                nemicox18 = round(
+                                    random.randrange(0, infoObject.current_w - oggetto_n) / oggetto_n) * oggetto_n
+                                nemicoy18 = round(
+                                    random.randrange(0, infoObject.current_h - oggetto_n) / oggetto_n) * oggetto_n
+                                listainizio += 1
+
+                                # collisione nemico 19
+            if len(lista) > 0:
+                if (main_x >= nemicox19) and (main_x <= nemicox19 + oggetto_n) or (main_x + oggetto >= nemicox19) and (
+                                main_x + oggetto <= nemicox19 + oggetto_n):
+                    if (main_y >= nemicoy19) and (main_y <= nemicoy19 + oggetto_n) or (
+                            main_y + oggetto >= nemicoy19) and (
+                                    main_y + oggetto <= nemicoy19 + oggetto_n):
+                        if (main_x + oggetto >= nemicox19) and (main_x + oggetto <= nemicox19 + oggetto_n):
+                            if (main_y + oggetto >= nemicoy19) and (main_y + oggetto <= nemicoy19 + oggetto_n):
+                                cattura.play()
+                                nemicox19 = round(
+                                    random.randrange(0, infoObject.current_w - oggetto_n) / oggetto_n) * oggetto_n
+                                nemicoy19 = round(
+                                    random.randrange(0, infoObject.current_h - oggetto_n) / oggetto_n) * oggetto_n
+                                listainizio += 1
+
+                                # collisione nemico 20
+            if len(lista) > 0:
+                if (main_x >= nemicox20) and (main_x <= nemicox20 + oggetto_n) or (main_x + oggetto >= nemicox20) and (
+                                main_x + oggetto <= nemicox20 + oggetto_n):
+                    if (main_y >= nemicoy20) and (main_y <= nemicoy20 + oggetto_n) or (
+                            main_y + oggetto >= nemicoy20) and (
+                                    main_y + oggetto <= nemicoy20 + oggetto_n):
+                        if (main_x + oggetto >= nemicox20) and (main_x + oggetto <= nemicox20 + oggetto_n):
+                            if (main_y + oggetto >= nemicoy20) and (main_y + oggetto <= nemicoy20 + oggetto_n):
+                                cattura.play()
+                                nemicox20 = round(
+                                    random.randrange(0, infoObject.current_w - oggetto_n) / oggetto_n) * oggetto_n
+                                nemicoy20 = round(
+                                    random.randrange(0, infoObject.current_h - oggetto_n) / oggetto_n) * oggetto_n
+                                listainizio += 1
+
+                                # collisione nemico 21
+            if len(lista) > 0:
+                if (main_x >= nemicox21) and (main_x <= nemicox21 + oggetto_n) or (main_x + oggetto >= nemicox21) and (
+                                main_x + oggetto <= nemicox21 + oggetto_n):
+                    if (main_y >= nemicoy21) and (main_y <= nemicoy21 + oggetto_n) or (
+                            main_y + oggetto >= nemicoy21) and (
+                                    main_y + oggetto <= nemicoy21 + oggetto_n):
+                        if (main_x + oggetto >= nemicox21) and (main_x + oggetto <= nemicox21 + oggetto_n):
+                            if (main_y + oggetto >= nemicoy21) and (main_y + oggetto <= nemicoy21 + oggetto_n):
+                                cattura.play()
+                                nemicox21 = round(
+                                    random.randrange(0, infoObject.current_w - oggetto_n) / oggetto_n) * oggetto_n
+                                nemicoy21 = round(
+                                    random.randrange(0, infoObject.current_h - oggetto_n) / oggetto_n) * oggetto_n
+                                listainizio += 1
+
+                                # collisione nemico 22
+            if len(lista) > 0:
+                if (main_x >= nemicox22) and (main_x <= nemicox22 + oggetto_n) or (main_x + oggetto >= nemicox22) and (
+                                main_x + oggetto <= nemicox22 + oggetto_n):
+                    if (main_y >= nemicoy22) and (main_y <= nemicoy22 + oggetto_n) or (
+                            main_y + oggetto >= nemicoy22) and (
+                                    main_y + oggetto <= nemicoy22 + oggetto_n):
+                        if (main_x + oggetto >= nemicox22) and (main_x + oggetto <= nemicox22 + oggetto_n):
+                            if (main_y + oggetto >= nemicoy22) and (main_y + oggetto <= nemicoy22 + oggetto_n):
+                                cattura.play()
+                                nemicox22 = round(
+                                    random.randrange(0, infoObject.current_w - oggetto_n) / oggetto_n) * oggetto_n
+                                nemicoy22 = round(
+                                    random.randrange(0, infoObject.current_h - oggetto_n) / oggetto_n) * oggetto_n
+                                listainizio += 1
+
+                                # collisione nemico 23
+            if len(lista) > 0:
+                if (main_x >= nemicox23) and (main_x <= nemicox23 + oggetto_n) or (main_x + oggetto >= nemicox23) and (
+                                main_x + oggetto <= nemicox23 + oggetto_n):
+                    if (main_y >= nemicoy23) and (main_y <= nemicoy23 + oggetto_n) or (
+                            main_y + oggetto >= nemicoy23) and (
+                                    main_y + oggetto <= nemicoy23 + oggetto_n):
+                        if (main_x + oggetto >= nemicox23) and (main_x + oggetto <= nemicox23 + oggetto_n):
+                            if (main_y + oggetto >= nemicoy23) and (main_y + oggetto <= nemicoy23 + oggetto_n):
+                                cattura.play()
+                                nemicox23 = round(
+                                    random.randrange(0, infoObject.current_w - oggetto_n) / oggetto_n) * oggetto_n
+                                nemicoy23 = round(
+                                    random.randrange(0, infoObject.current_h - oggetto_n) / oggetto_n) * oggetto_n
+                                listainizio += 1
+
+
+                                # collisione nemico 24
+            if len(lista) > 0:
+                if (main_x >= nemicox24) and (main_x <= nemicox24 + oggetto_n) or (main_x + oggetto >= nemicox24) and (
+                                main_x + oggetto <= nemicox24 + oggetto_n):
+                    if (main_y >= nemicoy24) and (main_y <= nemicoy24 + oggetto_n) or (
+                            main_y + oggetto >= nemicoy24) and (
+                                    main_y + oggetto <= nemicoy24 + oggetto_n):
+                        if (main_x + oggetto >= nemicox24) and (main_x + oggetto <= nemicox24 + oggetto_n):
+                            if (main_y + oggetto >= nemicoy24) and (main_y + oggetto <= nemicoy24 + oggetto_n):
+                                cattura.play()
+                                nemicox24 = round(
+                                    random.randrange(0, infoObject.current_w - oggetto_n) / oggetto_n) * oggetto_n
+                                nemicoy24 = round(
+                                    random.randrange(0, infoObject.current_h - oggetto_n) / oggetto_n) * oggetto_n
+                                listainizio += 1
+
+
+                                # collisione nemico 25 (tranello)
+            if len(lista) > 1:
+                if (main_x >= nemicox25) and (main_x <= nemicox25 + oggetto_n) or (main_x + oggetto >= nemicox25) and (
+                                main_x + oggetto <= nemicox25 + oggetto_n):
+                    if (main_y >= nemicoy25) and (main_y <= nemicoy25 + oggetto_n) or (
+                            main_y + oggetto >= nemicoy25) and (
+                                    main_y + oggetto <= nemicoy25 + oggetto_n):
+                        if (main_x + oggetto >= nemicox25) and (main_x + oggetto <= nemicox25 + oggetto_n):
+                            if (main_y + oggetto >= nemicoy25) and (main_y + oggetto <= nemicoy25 + oggetto_n):
+                                cattura.play()
+                                nemicox25 = round(
+                                    random.randrange(0, infoObject.current_w - oggetto_n) / oggetto_n) * oggetto_n
+                                nemicoy25 = round(
+                                    random.randrange(0, infoObject.current_h - oggetto_n) / oggetto_n) * oggetto_n
+                                listainizio -= 3
+                                lista.remove(testa)
+                                if vita <= 0:
+                                    gameOver = True
+                                elif listainizio - 1 <= 0:
+                                    vita -= 1
+
         clock.tick(velocita)
     pygame.quit()
     quit()

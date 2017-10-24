@@ -114,7 +114,7 @@ direzione = 'right'
 piccoloFont = pygame.font.SysFont('comicsansms', 30)
 medioFont = pygame.font.SysFont('comicsansms', 50)
 grandeFont = pygame.font.SysFont('comicsansms', 80)
-oggetto = 10
+oggetto = 11
 oggetto_n = 35
 gran_c = 23
 palla = 25
@@ -684,7 +684,7 @@ def inizio():
                                 vy = 12
 
         # collisione palla
-        if len(lista) >= 12:
+        if len(lista) >= 2:
             if (main_x >= x) and (main_x <= x + palla) or (main_x + oggetto >= x) and (main_x + oggetto <= x + palla):
                 if (main_y >= y) and (main_y <= y + palla) or (main_y + oggetto >= y) and (
                         main_y + oggetto <= y + palla):
@@ -719,7 +719,7 @@ def inizio():
                     vy = 5
 
             # collisione palla 7
-            if len(lista) >= 26:
+            if len(lista) >= 2:
                 if (main_x >= x7) and (main_x <= x7 + palla) or (main_x + oggetto >= x7) and (
                                 main_x + oggetto <= x7 + palla):
                     if (main_y >= y7) and (main_y <= y7 + palla) or (main_y + oggetto >= y7) and (
@@ -818,7 +818,7 @@ def inizio():
                     vy2 = 3
 
             # collisione palla 2
-            if len(lista) >= 41:
+            if len(lista) >= 2:
                 if (main_x >= y2) and (main_x <= y2 + palla) or (main_x + oggetto >= y2) and (
                                 main_x + oggetto <= y2 + palla):
                     if (main_y >= x2) and (main_y <= x2 + palla) or (main_y + oggetto >= x2) and (
@@ -862,7 +862,7 @@ def inizio():
                     vy3 = 12
 
             # collisione palla 3
-            if len(lista) >= 3:
+            if len(lista) >= 2:
                 if (main_x >= y3) and (main_x <= y3 + palla) or (main_x + oggetto >= y3) and (
                                 main_x + oggetto <= y3 + palla):
                     if (main_y >= x3) and (main_y <= x3 + palla) or (main_y + oggetto >= x3) and (
@@ -910,7 +910,7 @@ def inizio():
                     vy4 = 6
 
             # collisione palla 4
-            if len(lista) >= 5:
+            if len(lista) >= 2:
                 if (main_x >= y4) and (main_x <= y4 + palla) or (main_x + oggetto >= y4) and (
                                     main_x + oggetto <= y4 + palla):
                     if (main_y >= x4) and (main_y <= x4 + palla) or (main_y + oggetto >= x4) and (
@@ -1311,7 +1311,7 @@ def inizio():
                         craterey3 = round(random.randrange(0, infoObject.current_h - gran_c) / gran_c) * gran_c
 
         # collisione nemico strano 11
-        if len(lista) > 15:
+        if len(lista) > 0:
             if (main_x >= nemicox11) and (main_x <= nemicox11 + oggetto_n) or (main_x + oggetto >= nemicox11) \
                     and (main_x + oggetto <= nemicox11 + oggetto_n):
                 if (main_y >= nemicoy11) and (main_y <= nemicoy11 + oggetto_n) or (main_y + oggetto >= nemicoy11) \
@@ -1364,7 +1364,7 @@ def inizio():
                             craterey3 = round(random.randrange(0, infoObject.current_h - gran_c) / gran_c) * gran_c
 
         # collisione nemico strano 12
-        if len(lista) > 20:
+        if len(lista) > 0:
             if (main_x >= nemicox12) and (main_x <= nemicox12 + oggetto_n) or (main_x + oggetto >= nemicox12) \
                     and (main_x + oggetto <= nemicox12 + oggetto_n):
                 if (main_y >= nemicoy12) and (main_y <= nemicoy12 + oggetto_n) or (main_y + oggetto >= nemicoy12) \
@@ -1431,7 +1431,7 @@ def inizio():
                             craterey3 = round(random.randrange(0, infoObject.current_h - gran_c) / gran_c) * gran_c
 
         # collisione nemico strano 13
-        if len(lista) > 20:
+        if len(lista) > 0:
             if (main_x >= nemicox13) and (main_x <= nemicox13 + oggetto_n) or (main_x + oggetto >= nemicox13) \
                     and (main_x + oggetto <= nemicox13 + oggetto_n):
                 if (main_y >= nemicoy13) and (main_y <= nemicoy13 + oggetto_n) or (main_y + oggetto >= nemicoy13) \
@@ -1454,7 +1454,7 @@ def inizio():
                             craterey3 = round(random.randrange(0, infoObject.current_h - gran_c) / gran_c) * gran_c
 
         # collisione nemico strano 14
-        if len(lista) > 20:
+        if len(lista) > 0:
             if (main_x >= nemicox14) and (main_x <= nemicox14 + oggetto_n) or (main_x + oggetto >= nemicox14) \
                     and (main_x + oggetto <= nemicox14 + oggetto_n):
                 if (main_y >= nemicoy14) and (main_y <= nemicoy14 + oggetto_n) or (main_y + oggetto >= nemicoy14) \
@@ -1477,7 +1477,7 @@ def inizio():
                             craterey3 = round(random.randrange(0, infoObject.current_h - gran_c) / gran_c) * gran_c
 
         # collisione nemico strano 15
-        if len(lista) > 25:
+        if len(lista) > 5:
             if (main_x >= nemicox15) and (main_x <= nemicox15 + oggetto_n) or (main_x + oggetto >= nemicox15) and (
                             main_x + oggetto <= nemicox15 + oggetto_n):
                 if (main_y >= nemicoy15) and (main_y <= nemicoy15 + oggetto_n) or (main_y + oggetto >= nemicoy15) and (
@@ -1498,7 +1498,7 @@ def inizio():
                             craterey3 = round(random.randrange(0, infoObject.current_h - gran_c) / gran_c) * gran_c
 
         # collisione nemico strano 16
-        if len(lista) > 25:
+        if len(lista) > 0:
             if (main_x >= nemicox16) and (main_x <= nemicox16 + oggetto_n) or (main_x + oggetto >= nemicox16) and (
                             main_x + oggetto <= nemicox16 + oggetto_n):
                 if (main_y >= nemicoy16) and (main_y <= nemicoy16 + oggetto_n) or (main_y + oggetto >= nemicoy16) and (
@@ -1518,7 +1518,7 @@ def inizio():
                             craterex3 = round(random.randrange(0, infoObject.current_w - gran_c) / gran_c) * gran_c
                             craterey3 = round(random.randrange(0, infoObject.current_h - gran_c) / gran_c) * gran_c
                             # collisione nemico 17
-            if len(lista) > 0:
+            if len(lista) > 1:
                 if (main_x >= nemicox17) and (main_x <= nemicox17 + oggetto_n) or (main_x + oggetto >= nemicox17) and (
                                 main_x + oggetto <= nemicox17 + oggetto_n):
                     if (main_y >= nemicoy17) and (main_y <= nemicoy17 + oggetto_n) or (
@@ -1648,7 +1648,7 @@ def inizio():
 
 
                                 # collisione nemico 25 (tranello)
-            if len(lista) > 1:
+            if len(lista) > 2:
                 if (main_x >= nemicox25) and (main_x <= nemicox25 + oggetto_n) or (main_x + oggetto >= nemicox25) and (
                                 main_x + oggetto <= nemicox25 + oggetto_n):
                     if (main_y >= nemicoy25) and (main_y <= nemicoy25 + oggetto_n) or (

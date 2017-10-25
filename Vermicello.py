@@ -449,7 +449,7 @@ def inizio():
             messagioSchermo('Premi U per uscire', verde, 80, 'medio')
             messagioSchermo('Smile recuperati: ' + str(listainizio - 1), rosso, -20, 'medio')
             messagioSchermo('Record: %d ' % (record), rosso, -160, 'grande')
-            messagioSchermo('Vita: %d' % (vita), giallo, 140, 'grande')
+            messagioSchermo('Vite: %d' % (vita), giallo, 140, 'grande')
             pygame.display.update()
             for event in pygame.event.get():
                 if event.type == pygame.KEYDOWN:

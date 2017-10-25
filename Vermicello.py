@@ -280,7 +280,9 @@ def Punteggio(listainizio):
     record_file.close()
     testo1 = medioFont.render('Record: %d' % record, True, blu)
     schermo.blit(testo1, [infoObject.current_w / 2 - 150, 55])
-    testo2 = medioFont.render('Vita: %s' % vita, True, giallo)
+    testo2 = medioFont.render('Vita: %s' % vita, True, verde)
+    if vita <= 2:
+        testo2 = medioFont.render('Vita: %s' % vita, True, giallo)
     if vita <= 1:
         testo2 = medioFont.render('Vita: %s' % vita, True, rosso)
     schermo.blit(testo2, [infoObject.current_w / 1.3 - 150, 50])
@@ -449,19 +451,19 @@ def inizio():
     while not gioco:
         while gameOver:
             schermo.blit(sfondo2, [0, 0])
-            messagioSchermo('NOOO.....!!!!!', verde, - 80, 'grande')
-            messagioSchermo('Premi R per ripetere', verde, 30, 'medio')
-            messagioSchermo('Premi U per uscire', verde, 80, 'medio')
-            messagioSchermo('Smile recuperati: ' + str(listainizio - 1), rosso, -20, 'medio')
-            messagioSchermo('Record: %d ' % (record), rosso, -160, 'grande')
-            messagioSchermo('Vite: %d' % (vita), giallo, 140, 'grande')
+            messagioSchermo('NOOO.....!!!!!', rosso, - 80, 'grande')
+            messagioSchermo('Per continuare clicca la lettera C', verde, 30, 'medio')
+            messagioSchermo('Per uscire clicca la lettera U', verde, 80, 'medio')
+            messagioSchermo('Hai recuperato: ' + str(listainizio - 1) + '  Smile', giallo, -20, 'medio')
+            messagioSchermo('Record: %d ' % record, verde, -160, 'grande')
+            messagioSchermo('Vite: %d' % vita, giallo, 140, 'grande')
             pygame.display.update()
             for event in pygame.event.get():
                 if event.type == pygame.KEYDOWN:
                     if event.key == pygame.K_u:
                         gioco = True
                         gameOver = False
-                    if event.key == pygame.K_r:
+                    if event.key == pygame.K_c:
                         schianto.stop()
                         m_gioco.play()
                         inizio()

@@ -497,6 +497,7 @@ def inizio():
         # parametri schermo
         if len(lista) <= 19:
             if main_x >= infoObject.current_w-120 or main_x < 30 or main_y < 30 or main_y >= infoObject.current_h-110:
+                m_gioco.stop()
                 lapide.play()
                 gameOver = True
 

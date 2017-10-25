@@ -497,7 +497,6 @@ def inizio():
         # parametri schermo
         if len(lista) <= 19:
             if main_x >= infoObject.current_w-120 or main_x < 30 or main_y < 30 or main_y >= infoObject.current_h-110:
-                m_gioco.stop()
                 lapide.play()
                 gameOver = True
 
@@ -619,7 +618,6 @@ def inizio():
         # il vermicello non puo toccarsi
         for iniziolista in lista[:-50]:
             if iniziolista == testa:
-                m_gioco.stop()
                 lapide.play()
                 gameOver = True
 
@@ -782,7 +780,6 @@ def inizio():
                                     main_y + oggetto <= y1 + palla):
                         if (main_x + oggetto >= x1) and (main_x + oggetto <= x1 + palla):
                             if (main_y + oggetto >= y1) and (main_y + oggetto <= y1 + palla):
-                                m_gioco.stop()
                                 lapide.play()
                                 if vita <= 0:
                                     gameOver = True
@@ -834,7 +831,6 @@ def inizio():
                                         main_y + oggetto <= x2 + palla):
                         if (main_x + oggetto >= y2) and (main_x + oggetto <= y2 + palla):
                             if (main_y + oggetto >= x2) and (main_y + oggetto <= x2 + palla):
-                                m_gioco.stop()
                                 lapide.play()
                                 if vita <= 0:
                                     gameOver = True
@@ -882,7 +878,6 @@ def inizio():
                                 listainizio -= 1
                                 lista.remove(testa)
                                 if listainizio == 0:
-                                    m_gioco.stop()
                                     lapide.play()
                                     if vita <= 0:
                                         gameOver = True
@@ -988,7 +983,6 @@ def inizio():
                                 listainizio -= 1
                                 lista.remove(testa)
                                 if listainizio == 0:
-                                    m_gioco.stop()
                                     lapide.play()
                                     if vita <= 0:
                                         gameOver = True
@@ -1058,7 +1052,6 @@ def inizio():
                                 main_y + oggetto <= y5 + palla1):
                         if (main_x + oggetto >= x5) and (main_x + oggetto <= x5 + palla1):
                             if (main_y + oggetto >= y5) and (main_y + oggetto <= y5 + palla1):
-                                m_gioco.stop()
                                 lapide.play()
                                 if vita <= 0:
                                     gameOver = True
@@ -1552,7 +1545,8 @@ def inizio():
                             craterey2 = round(random.randrange(0, infoObject.current_h - gran_c) / gran_c) * gran_c
                             craterex3 = round(random.randrange(0, infoObject.current_w - gran_c) / gran_c) * gran_c
                             craterey3 = round(random.randrange(0, infoObject.current_h - gran_c) / gran_c) * gran_c
-                            # collisione nemico 17
+
+            # collisione nemico 17
             if len(lista) > 1:
                 if (main_x >= nemicox17) and (main_x <= nemicox17 + oggetto_n) or (main_x + oggetto >= nemicox17) and (
                                 main_x + oggetto <= nemicox17 + oggetto_n):
@@ -1570,7 +1564,7 @@ def inizio():
                                 if listainizio - 1 == 100:
                                     vita += 1
 
-                                # collisione nemico 18
+            # collisione nemico 18
             if len(lista) > 0:
                 if (main_x >= nemicox18) and (main_x <= nemicox18 + oggetto_n) or (main_x + oggetto >= nemicox18) and (
                                 main_x + oggetto <= nemicox18 + oggetto_n):
@@ -1588,7 +1582,7 @@ def inizio():
                                 if listainizio - 1 == 100:
                                     vita += 1
 
-                                # collisione nemico 19
+            # collisione nemico 19
             if len(lista) > 0:
                 if (main_x >= nemicox19) and (main_x <= nemicox19 + oggetto_n) or (main_x + oggetto >= nemicox19) and (
                                 main_x + oggetto <= nemicox19 + oggetto_n):
@@ -1606,7 +1600,7 @@ def inizio():
                                 if listainizio - 1 == 100:
                                     vita += 1
 
-                                # collisione nemico 20
+            # collisione nemico 20
             if len(lista) > 0:
                 if (main_x >= nemicox20) and (main_x <= nemicox20 + oggetto_n) or (main_x + oggetto >= nemicox20) and (
                                 main_x + oggetto <= nemicox20 + oggetto_n):
@@ -1624,7 +1618,7 @@ def inizio():
                                 if listainizio - 1 == 100:
                                     vita += 1
 
-                                # collisione nemico 21
+            # collisione nemico 21
             if len(lista) > 0:
                 if (main_x >= nemicox21) and (main_x <= nemicox21 + oggetto_n) or (main_x + oggetto >= nemicox21) and (
                                 main_x + oggetto <= nemicox21 + oggetto_n):
@@ -1642,7 +1636,7 @@ def inizio():
                                 if listainizio - 1 == 100:
                                     vita += 1
 
-                                # collisione nemico 22
+            # collisione nemico 22
             if len(lista) > 0:
                 if (main_x >= nemicox22) and (main_x <= nemicox22 + oggetto_n) or (main_x + oggetto >= nemicox22) and (
                                 main_x + oggetto <= nemicox22 + oggetto_n):
@@ -1660,7 +1654,7 @@ def inizio():
                                 if listainizio - 1 == 100:
                                     vita += 1
 
-                                # collisione nemico 23
+            # collisione nemico 23
             if len(lista) > 0:
                 if (main_x >= nemicox23) and (main_x <= nemicox23 + oggetto_n) or (main_x + oggetto >= nemicox23) and (
                                 main_x + oggetto <= nemicox23 + oggetto_n):
@@ -1679,7 +1673,7 @@ def inizio():
                                     vita += 1
 
 
-                                # collisione nemico 24
+            # collisione nemico 24
             if len(lista) > 0:
                 if (main_x >= nemicox24) and (main_x <= nemicox24 + oggetto_n) or (main_x + oggetto >= nemicox24) and (
                                 main_x + oggetto <= nemicox24 + oggetto_n):
@@ -1698,7 +1692,7 @@ def inizio():
                                     vita += 1
 
 
-                                # collisione nemico 25 (tranello)
+            # collisione nemico 25 (tranello)
             if len(lista) > 2:
                 if (main_x >= nemicox25) and (main_x <= nemicox25 + oggetto_n) or (main_x + oggetto >= nemicox25) and (
                                 main_x + oggetto <= nemicox25 + oggetto_n):

@@ -625,10 +625,10 @@ def inizio():
         # ------------------------------------------------------------------------------------
         # il vermicello non puo toccarsi
         # ------------------------------------------------------------------------------------
-        for iniziolista in lista[:-50]:
-            if iniziolista == testa:
-                lapide.play()
-                gameOver = True
+        # for iniziolista in lista[:-50]:
+        #     if iniziolista == testa:
+        #         lapide.play()
+        #         gameOver = True
         giocatore(lista)
         rompi()
         if len(lista) <= 20:
@@ -1788,6 +1788,7 @@ def inizio():
                                     random.randrange(0, infoObject.current_w - oggetto_n) / oggetto_n) * oggetto_n
                                 nemicoy25 = round(
                                     random.randrange(0, infoObject.current_h - oggetto_n) / oggetto_n) * oggetto_n
+                                lapide.play()
                                 listainizio -= 3
                                 lista.remove(testa)
                                 if vita <= 0:
@@ -1796,7 +1797,6 @@ def inizio():
                                 elif listainizio - 1 <= 0:
                                     avviso.play()
                                     vita -= 1
-
         clock.tick(velocita)
     pygame.quit()
     quit()

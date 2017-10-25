@@ -573,7 +573,9 @@ def inizio():
         # cratere 2
         # ------------------------------------------------------------------------------------
         schermo.blit(cratere2, [craterex2, craterey2, gran_c, gran_c])
+        #-------------------------------------------------------------------------------------
         # collisione cratere 2
+        #-------------------------------------------------------------------------------------
         if len(lista) >= 2:
             if (main_x >= craterex2) and (main_x <= craterex2 + gran_c) or (main_x + oggetto >= craterex2) \
                     and (main_x + oggetto <= craterex2 + gran_c):
@@ -625,7 +627,7 @@ def inizio():
         # ------------------------------------------------------------------------------------
         # il vermicello non puo toccarsi
         # ------------------------------------------------------------------------------------
-        # for iniziolista in lista[:-50]:
+        # for iniziolista in lista[:-2]:
         #     if iniziolista == testa:
         #         lapide.play()
         #         gameOver = True

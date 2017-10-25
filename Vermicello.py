@@ -1,6 +1,11 @@
 #!/usr/bin/python
 # coding=utf-8
 
+# Il gioco è stato scritto da uno che non ne sa nulla di programmazione, che sarei io :)
+# Il gioco funziona con python27
+# Buon divertimento, se vi diverte, lo spero, aaaaa
+
+
 import random
 import pygame
 

@@ -53,7 +53,7 @@ sfondo2 = pygame.image.load('seleziona.jpg')
 # pygame.display.set_icon(pygame.image.load('supermen1.png'))
 
 # qui si inserisce il titolo nello schermo gioco
-pygame.display.set_caption('HO FAME, FAMMI MANGIARE ......MA STAI ATTENTO...........')
+pygame.display.set_caption('CIOA, HO FAME, FAMMI MANGIARE ......MA STAI ATTENTO...........')
 
 # immagine tranello
 immagine25 = pygame.image.load('attenzione.png')

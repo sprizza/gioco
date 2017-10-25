@@ -53,7 +53,7 @@ sfondo2 = pygame.image.load('seleziona.jpg')
 # pygame.display.set_icon(pygame.image.load('supermen1.png'))
 
 # qui si inserisce il titolo nello schermo gioco
-pygame.display.set_caption('SE MI FAI MANGIARE ......ATTENTO...........')
+pygame.display.set_caption('HO FAME, FAMMI MANGIARE ......MA STAI ATTENTO...........')
 
 # immagine tranello
 immagine25 = pygame.image.load('attenzione.png')
@@ -273,11 +273,11 @@ def Punteggio(listainizio):
     record_file = open("FileGioco.txt", "r")
     record = int(record_file.read())
     record_file.close()
-    testo1 = grandeFont.render('Record: %d' % record, True, blu)
-    schermo.blit(testo1, [infoObject.current_w / 2 - 150, 50])
-    testo2 = grandeFont.render('Vita: %s' % vita, True, giallo)
+    testo1 = medioFont.render('Record: %d' % record, True, blu)
+    schermo.blit(testo1, [infoObject.current_w / 2 - 150, 55])
+    testo2 = medioFont.render('Vita: %s' % vita, True, giallo)
     if vita <= 1:
-        testo2 = grandeFont.render('Vita: %s' % vita, True, rosso)
+        testo2 = medioFont.render('Vita: %s' % vita, True, rosso)
     schermo.blit(testo2, [infoObject.current_w / 1.3 - 150, 50])
     if listainizio-1 > record:
         record_file = open("FileGioco.txt", "w")

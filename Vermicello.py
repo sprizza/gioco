@@ -185,7 +185,7 @@ def inizioGioco():
                 pygame.quit()
                 quit()
             if event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_g:
+                if event.key == pygame.K_i:
                     m_gioco.play(-1)
                     ini = False
                 if event.key == pygame.K_q:
@@ -196,7 +196,7 @@ def inizioGioco():
         messagioSchermo('Ciao....dopo 2 smile....si attivano i tranelli...', nero, - 30, 'medio')
         messagioSchermo('..dopo 20 smile puoi passare da parte a parte dello schermo...... ', nero, 10, 'medio')
         messagioSchermo('...pero aumentano anche gli imprevisti....!!!', nero, 50, 'medio')
-        messagioSchermo('Premi G per giocare, premi Q per uscire', nero, 180, 'medio')
+        messagioSchermo('Premi I per giocare, premi Q per uscire', nero, 180, 'medio')
         messagioSchermo('Premi spazio per mettere in pausa', nero, 210)
         messagioSchermo('Premi spazio per uscire dalla pausa', nero, 230)
         pygame.display.update()
@@ -273,9 +273,11 @@ def Punteggio(listainizio):
     record_file = open("FileGioco.txt", "r")
     record = int(record_file.read())
     record_file.close()
-    testo1 = grandeFont.render('Record: %d' % (record), True, blu)
+    testo1 = grandeFont.render('Record: %d' % record, True, blu)
     schermo.blit(testo1, [infoObject.current_w / 2 - 150, 50])
-    testo2 = grandeFont.render('Vita: %s' % (vita), True, giallo)
+    testo2 = grandeFont.render('Vita: %s' % vita, True, giallo)
+    if vita <= 1:
+        testo2 = grandeFont.render('Vita: %s' % vita, True, rosso)
     schermo.blit(testo2, [infoObject.current_w / 1.3 - 150, 50])
     if listainizio-1 > record:
         record_file = open("FileGioco.txt", "w")
@@ -447,6 +449,7 @@ def inizio():
             messagioSchermo('Premi U per uscire', verde, 80, 'medio')
             messagioSchermo('Smile recuperati: ' + str(listainizio - 1), rosso, -20, 'medio')
             messagioSchermo('Record: %d ' % (record), rosso, -160, 'grande')
+            messagioSchermo('Vita: %d' % (vita), giallo, 140, 'grande')
             pygame.display.update()
             for event in pygame.event.get():
                 if event.type == pygame.KEYDOWN:
@@ -490,7 +493,7 @@ def inizio():
         if len(lista) <= 19:
             if main_x >= infoObject.current_w-120 or main_x < 30 or main_y < 30 or main_y >= infoObject.current_h-110:
                 m_gioco.stop()
-                schianto.play()
+                lapide.play()
                 gameOver = True
 
         if len(lista) >= 19:
@@ -658,6 +661,7 @@ def inizio():
                             vx = 10
                             if len(lista) >= 20:
                                 vx = 12
+
         if y > infoObject.current_h:
             vy = -4
             if len(lista) >= 15:
@@ -1064,19 +1068,13 @@ def inizio():
 
         if len(lista) >= 22:
             if main_x + 15 >= xl and main_y + 15 <= ys and main_x - 15 <= xs + xl:
-                m_gioco.stop()
                 preso.play()
-                if vita <= 0:
-                    gameOver = True
-                elif listainizio - 1 <= 0:
-                    vita -= 1
+                m_gioco.stop()
+                gameOver = True
             if main_x + 15 >= xl and main_y + 15 >= ys + spazio and main_x - 15 <= xs + xl:
-                m_gioco.stop()
                 preso.play()
-                if vita <= 0:
-                    gameOver = True
-                elif listainizio - 1 <= 0:
-                    vita -= 1
+                m_gioco.stop()
+                gameOver = True
 
         # muri strani
         if y11 < -x12:
@@ -1103,6 +1101,8 @@ def inizio():
                         nemicox = round(random.randrange(0, infoObject.current_w - oggetto_n) / oggetto_n) * oggetto_n
                         nemicoy = round(random.randrange(0, infoObject.current_h - oggetto_n) / oggetto_n) * oggetto_n
                         listainizio += 1
+                        if listainizio - 1 == 100:
+                            vita += 1
                         craterex1 = round(random.randrange(0, infoObject.current_w - gran_c) / gran_c) * gran_c
                         craterey1 = round(random.randrange(0, infoObject.current_h - gran_c) / gran_c) * gran_c
                         craterex2 = round(random.randrange(0, infoObject.current_w - gran_c) / gran_c) * gran_c
@@ -1121,6 +1121,8 @@ def inizio():
                         nemicox2 = round(random.randrange(0, infoObject.current_w - oggetto_n) / oggetto_n) * oggetto_n
                         nemicoy2 = round(random.randrange(0, infoObject.current_h - oggetto_n) / oggetto_n) * oggetto_n
                         listainizio += 1
+                        if listainizio - 1 == 100:
+                            vita += 1
                         craterex1 = round(random.randrange(0, infoObject.current_w - gran_c) / gran_c) * gran_c
                         craterey1 = round(random.randrange(0, infoObject.current_h - gran_c) / gran_c) * gran_c
                         craterex2 = round(random.randrange(0, infoObject.current_w - gran_c) / gran_c) * gran_c
@@ -1139,6 +1141,8 @@ def inizio():
                         nemicox3 = round(random.randrange(0, infoObject.current_w - oggetto_n) / oggetto_n) * oggetto_n
                         nemicoy3 = round(random.randrange(0, infoObject.current_h - oggetto_n) / oggetto_n) * oggetto_n
                         listainizio += 1
+                        if listainizio - 1 == 100:
+                            vita += 1
                         craterex1 = round(random.randrange(0, infoObject.current_w - gran_c) / gran_c) * gran_c
                         craterey1 = round(random.randrange(0, infoObject.current_h - gran_c) / gran_c) * gran_c
                         craterex2 = round(random.randrange(0, infoObject.current_w - gran_c) / gran_c) * gran_c
@@ -1157,6 +1161,8 @@ def inizio():
                         nemicox4 = round(random.randrange(0, infoObject.current_w - oggetto_n) / oggetto_n) * oggetto_n
                         nemicoy4 = round(random.randrange(0, infoObject.current_h - oggetto_n) / oggetto_n) * oggetto_n
                         listainizio += 1
+                        if listainizio - 1 == 100:
+                            vita += 1
                         craterex1 = round(random.randrange(0, infoObject.current_w - gran_c) / gran_c) * gran_c
                         craterey1 = round(random.randrange(0, infoObject.current_h - gran_c) / gran_c) * gran_c
                         craterex2 = round(random.randrange(0, infoObject.current_w - gran_c) / gran_c) * gran_c
@@ -1175,6 +1181,8 @@ def inizio():
                         nemicox5 = round(random.randrange(0, infoObject.current_w - oggetto_n) / oggetto_n) * oggetto_n
                         nemicoy5 = round(random.randrange(0, infoObject.current_h - oggetto_n) / oggetto_n) * oggetto_n
                         listainizio += 1
+                        if listainizio - 1 == 100:
+                            vita += 1
                         craterex1 = round(random.randrange(0, infoObject.current_w - gran_c) / gran_c) * gran_c
                         craterey1 = round(random.randrange(0, infoObject.current_h - gran_c) / gran_c) * gran_c
                         craterex2 = round(random.randrange(0, infoObject.current_w - gran_c) / gran_c) * gran_c
@@ -1193,6 +1201,8 @@ def inizio():
                         nemicox6 = round(random.randrange(0, infoObject.current_w - oggetto_n) / oggetto_n) * oggetto_n
                         nemicoy6 = round(random.randrange(0, infoObject.current_h - oggetto_n) / oggetto_n) * oggetto_n
                         listainizio += 1
+                        if listainizio - 1 == 100:
+                            vita += 1
                         craterex1 = round(random.randrange(0, infoObject.current_w - gran_c) / gran_c) * gran_c
                         craterey1 = round(random.randrange(0, infoObject.current_h - gran_c) / gran_c) * gran_c
                         craterex2 = round(random.randrange(0, infoObject.current_w - gran_c) / gran_c) * gran_c
@@ -1211,6 +1221,8 @@ def inizio():
                         nemicox7 = round(random.randrange(0, infoObject.current_w - oggetto_n) / oggetto_n) * oggetto_n
                         nemicoy7 = round(random.randrange(0, infoObject.current_h - oggetto_n) / oggetto_n) * oggetto_n
                         listainizio += 1
+                        if listainizio - 1 == 100:
+                            vita += 1
                         nemicox8 = round(random.randrange(0, infoObject.current_w - oggetto_n) / oggetto_n) * oggetto_n
                         nemicoy8 = round(random.randrange(0, infoObject.current_h - oggetto_n) / oggetto_n) * oggetto_n
                         craterex1 = round(random.randrange(0, infoObject.current_w - gran_c) / gran_c) * gran_c
@@ -1231,6 +1243,8 @@ def inizio():
                         nemicox8 = round(random.randrange(0, infoObject.current_w - oggetto_n) / oggetto_n) * oggetto_n
                         nemicoy8 = round(random.randrange(0, infoObject.current_h - oggetto_n) / oggetto_n) * oggetto_n
                         listainizio += 1
+                        if listainizio - 1 == 100:
+                            vita += 1
                         nemicox3 = round(random.randrange(0, infoObject.current_w - oggetto_n) / oggetto_n) * oggetto_n
                         nemicoy3 = round(random.randrange(0, infoObject.current_h - oggetto_n) / oggetto_n) * oggetto_n
                         nemicox4 = round(random.randrange(0, infoObject.current_w - oggetto_n) / oggetto_n) * oggetto_n
@@ -1259,6 +1273,8 @@ def inizio():
                         nemicox9 = round(random.randrange(0, infoObject.current_w - oggetto_n) / oggetto_n) * oggetto_n
                         nemicoy9 = round(random.randrange(0, infoObject.current_h - oggetto_n) / oggetto_n) * oggetto_n
                         listainizio += 1
+                        if listainizio - 1 == 100:
+                            vita += 1
                         nemicox3 = round(random.randrange(0, infoObject.current_w - oggetto_n) / oggetto_n) * oggetto_n
                         nemicoy3 = round(random.randrange(0, infoObject.current_h - oggetto_n) / oggetto_n) * oggetto_n
                         nemicox4 = round(random.randrange(0, infoObject.current_w - oggetto_n) / oggetto_n) * oggetto_n
@@ -1289,6 +1305,8 @@ def inizio():
                         nemicox10 = round(random.randrange(0, infoObject.current_w - oggetto_n) / oggetto_n) * oggetto_n
                         nemicoy10 = round(random.randrange(0, infoObject.current_h - oggetto_n) / oggetto_n) * oggetto_n
                         listainizio += 1
+                        if listainizio - 1 == 100:
+                            vita += 1
                         nemicox3 = round(random.randrange(0, infoObject.current_w - oggetto_n) / oggetto_n) * oggetto_n
                         nemicoy3 = round(random.randrange(0, infoObject.current_h - oggetto_n) / oggetto_n) * oggetto_n
                         nemicox4 = round(random.randrange(0, infoObject.current_w - oggetto_n) / oggetto_n) * oggetto_n
@@ -1324,6 +1342,8 @@ def inizio():
                             nemicoy11 = round(
                                 random.randrange(0, infoObject.current_h - oggetto_n) / oggetto_n) * oggetto_n
                             listainizio += 1
+                            if listainizio - 1 == 100:
+                                vita += 1
                             nemicox3 = round(
                                 random.randrange(0, infoObject.current_w - oggetto_n) / oggetto_n) * oggetto_n
                             nemicoy3 = round(
@@ -1377,7 +1397,9 @@ def inizio():
                             nemicoy12 = round(
                                 random.randrange(0, infoObject.current_h - oggetto_n) / oggetto_n) * oggetto_n
                             listainizio += 1
-                            if len(lista) >= 60:
+                            if listainizio - 1 == 100:
+                                vita += 1
+                            elif len(lista) >= 60:
                                 listainizio += 2
                             nemicox3 = round(
                                 random.randrange(0, infoObject.current_w - oggetto_n) / oggetto_n) * oggetto_n
@@ -1444,7 +1466,9 @@ def inizio():
                             nemicoy13 = round(
                                 random.randrange(0, infoObject.current_h - oggetto_n) / oggetto_n) * oggetto_n
                             listainizio += 1
-                            if len(lista) >= 60:
+                            if listainizio - 1 == 100:
+                                vita += 1
+                            elif len(lista) >= 60:
                                 listainizio += 2
                             craterex1 = round(random.randrange(0, infoObject.current_w - gran_c) / gran_c) * gran_c
                             craterey1 = round(random.randrange(0, infoObject.current_h - gran_c) / gran_c) * gran_c
@@ -1467,7 +1491,9 @@ def inizio():
                             nemicoy14 = round(
                                 random.randrange(0, infoObject.current_h - oggetto_n) / oggetto_n) * oggetto_n
                             listainizio += 1
-                            if len(lista) >= 60:
+                            if listainizio - 1 == 100:
+                                vita += 1
+                            elif len(lista) >= 60:
                                 listainizio += 2
                             craterex1 = round(random.randrange(0, infoObject.current_w - gran_c) / gran_c) * gran_c
                             craterey1 = round(random.randrange(0, infoObject.current_h - gran_c) / gran_c) * gran_c
@@ -1490,6 +1516,8 @@ def inizio():
                             nemicoy15 = round(
                                 random.randrange(0, infoObject.current_h - oggetto_n) / oggetto_n) * oggetto_n
                             listainizio += 1
+                            if listainizio - 1 == 100:
+                                vita += 1
                             craterex1 = round(random.randrange(0, infoObject.current_w - gran_c) / gran_c) * gran_c
                             craterey1 = round(random.randrange(0, infoObject.current_h - gran_c) / gran_c) * gran_c
                             craterex2 = round(random.randrange(0, infoObject.current_w - gran_c) / gran_c) * gran_c
@@ -1511,6 +1539,8 @@ def inizio():
                             nemicoy16 = round(
                                 random.randrange(0, infoObject.current_h - oggetto_n) / oggetto_n) * oggetto_n
                             listainizio += 2
+                            if listainizio - 1 == 100:
+                                vita += 1
                             craterex1 = round(random.randrange(0, infoObject.current_w - gran_c) / gran_c) * gran_c
                             craterey1 = round(random.randrange(0, infoObject.current_h - gran_c) / gran_c) * gran_c
                             craterex2 = round(random.randrange(0, infoObject.current_w - gran_c) / gran_c) * gran_c
@@ -1532,6 +1562,8 @@ def inizio():
                                 nemicoy17 = round(
                                     random.randrange(0, infoObject.current_h - oggetto_n) / oggetto_n) * oggetto_n
                                 listainizio += 1
+                                if listainizio - 1 == 100:
+                                    vita += 1
 
                                 # collisione nemico 18
             if len(lista) > 0:
@@ -1548,6 +1580,8 @@ def inizio():
                                 nemicoy18 = round(
                                     random.randrange(0, infoObject.current_h - oggetto_n) / oggetto_n) * oggetto_n
                                 listainizio += 1
+                                if listainizio - 1 == 100:
+                                    vita += 1
 
                                 # collisione nemico 19
             if len(lista) > 0:
@@ -1564,6 +1598,8 @@ def inizio():
                                 nemicoy19 = round(
                                     random.randrange(0, infoObject.current_h - oggetto_n) / oggetto_n) * oggetto_n
                                 listainizio += 1
+                                if listainizio - 1 == 100:
+                                    vita += 1
 
                                 # collisione nemico 20
             if len(lista) > 0:
@@ -1580,6 +1616,8 @@ def inizio():
                                 nemicoy20 = round(
                                     random.randrange(0, infoObject.current_h - oggetto_n) / oggetto_n) * oggetto_n
                                 listainizio += 1
+                                if listainizio - 1 == 100:
+                                    vita += 1
 
                                 # collisione nemico 21
             if len(lista) > 0:
@@ -1596,6 +1634,8 @@ def inizio():
                                 nemicoy21 = round(
                                     random.randrange(0, infoObject.current_h - oggetto_n) / oggetto_n) * oggetto_n
                                 listainizio += 1
+                                if listainizio - 1 == 100:
+                                    vita += 1
 
                                 # collisione nemico 22
             if len(lista) > 0:
@@ -1612,6 +1652,8 @@ def inizio():
                                 nemicoy22 = round(
                                     random.randrange(0, infoObject.current_h - oggetto_n) / oggetto_n) * oggetto_n
                                 listainizio += 1
+                                if listainizio - 1 == 100:
+                                    vita += 1
 
                                 # collisione nemico 23
             if len(lista) > 0:
@@ -1628,6 +1670,8 @@ def inizio():
                                 nemicoy23 = round(
                                     random.randrange(0, infoObject.current_h - oggetto_n) / oggetto_n) * oggetto_n
                                 listainizio += 1
+                                if listainizio - 1 == 100:
+                                    vita += 1
 
 
                                 # collisione nemico 24
@@ -1645,6 +1689,8 @@ def inizio():
                                 nemicoy24 = round(
                                     random.randrange(0, infoObject.current_h - oggetto_n) / oggetto_n) * oggetto_n
                                 listainizio += 1
+                                if listainizio - 1 == 100:
+                                    vita += 1
 
 
                                 # collisione nemico 25 (tranello)

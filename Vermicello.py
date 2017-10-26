@@ -64,7 +64,7 @@ sfondo2 = pygame.image.load('seleziona.jpg')
 # ------------------------------------------------------------------------------------
 # qui si inserisce il titolo nello schermo gioco
 # ------------------------------------------------------------------------------------
-pygame.display.set_caption('CIOA, HO FAME, FAMMI MANGIARE ......MA STAI ATTENTO...........')
+pygame.display.set_caption('CIAO, HO FAME, FAMMI MANGIARE ......MA STAI ATTENTO...........')
 # ------------------------------------------------------------------------------------
 # immagine tranello
 # ------------------------------------------------------------------------------------
@@ -1802,5 +1802,6 @@ def inizio():
         clock.tick(velocita)
     pygame.quit()
     quit()
+clock.tick(velocita)
 inizioGioco()
 inizio()

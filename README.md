@@ -1,1 +1,2 @@
 # gioco
+# strippa_gioco

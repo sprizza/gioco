@@ -14,6 +14,7 @@
     <SUITE FILE_PATH="coverage/gioco$prove4__1_.coverage" NAME="prove4 (1) Coverage Results" MODIFIED="1508931411369" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../gioco2" />
     <SUITE FILE_PATH="coverage/gioco$modifiche_gioco.coverage" NAME="modifiche_gioco Coverage Results" MODIFIED="1508590959694" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/gioco$bot.coverage" NAME="bot Coverage Results" MODIFIED="1508330771075" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.." />
+    <SUITE FILE_PATH="coverage/gioco$vermicello.coverage" NAME="vermicello Coverage Results" MODIFIED="1525101898725" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/gioco$prove4.coverage" NAME="prove4 Coverage Results" MODIFIED="1508863675202" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/gioco$gioco_sta.coverage" NAME="gioco_sta Coverage Results" MODIFIED="1508854037467" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/gioco$timer2.coverage" NAME="timer2 Coverage Results" MODIFIED="1509457455572" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.." />
@@ -21,7 +22,7 @@
     <SUITE FILE_PATH="coverage/gioco$modifiche_gioco__1_.coverage" NAME="modifiche_gioco (1) Coverage Results" MODIFIED="1508857039913" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/eic_ide/gioc_modificato" />
     <SUITE FILE_PATH="coverage/gioco$collisione.coverage" NAME="collisione Coverage Results" MODIFIED="1509472845214" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../prova_collisioni" />
     <SUITE FILE_PATH="coverage/gioco$prova_nemico.coverage" NAME="prova_nemico Coverage Results" MODIFIED="1507570916208" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/gioco$Vermicello.coverage" NAME="Vermicello Coverage Results" MODIFIED="1525077783012" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/gioco$Vermicello.coverage" NAME="Vermicello Coverage Results" MODIFIED="1525101886975" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/gioco$main.coverage" NAME="main Coverage Results" MODIFIED="1509373841655" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../prova_collisioni" />
     <SUITE FILE_PATH="coverage/gioco$views.coverage" NAME="views Coverage Results" MODIFIED="1508330920017" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.." />
     <SUITE FILE_PATH="coverage/gioco$c_rovescia_p.coverage" NAME="c_rovescia_p Coverage Results" MODIFIED="1509474563054" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../prova_collisioni" />
@@ -75,15 +76,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Vermicello.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/Vermicello.py">
+          <file leaf-file-name="vermicello.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/vermicello.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="162">
-                  <caret line="9" selection-start-line="9" selection-end-line="9" />
-                  <folding>
-                    <element signature="e#495#508#0" expanded="true" />
-                  </folding>
-                </state>
+                <state relative-caret-position="-162" />
               </provider>
             </entry>
           </file>
@@ -157,6 +153,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -172,7 +169,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -199,7 +195,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Vermicello">
+  <component name="RunManager" selected="Python.vermicello">
     <configuration name="Vermicello" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="gioco" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -276,7 +272,7 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="timer2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="vermicello" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="gioco" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -284,12 +280,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/.." />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../timer2.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/vermicello.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -298,17 +294,17 @@
     <list>
       <item itemvalue="Python.collisione" />
       <item itemvalue="Python.cazzate" />
-      <item itemvalue="Python.timer2" />
       <item itemvalue="Python.c_rovescia_p" />
       <item itemvalue="Python.Vermicello" />
+      <item itemvalue="Python.vermicello" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.vermicello" />
         <item itemvalue="Python.Vermicello" />
         <item itemvalue="Python.c_rovescia_p" />
         <item itemvalue="Python.collisione" />
         <item itemvalue="Python.cazzate" />
-        <item itemvalue="Python.timer2" />
       </list>
     </recent_temporary>
   </component>
@@ -455,19 +451,19 @@
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32984293" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.1770891" side_tool="true" visible="true" weight="0.28416485" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.8229109" weight="0.28416485" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.1776425" side_tool="true" visible="true" weight="0.28416485" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49363586" weight="0.014069264" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.32984293" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.8223575" weight="0.28416485" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.4991699" weight="0.0" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29994467" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.0" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" weight="0.32946378" />
-      <window_info anchor="right" id="SciView" />
+      <window_info anchor="right" id="SciView" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.32946378" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4980631" weight="0.39935064" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4980631" weight="0.39935064" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -523,6 +519,40 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/../prova_collisioni/collisione.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3114">
+          <caret line="173" selection-start-line="173" selection-end-line="173" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../prova_collisioni/cazzate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="e#41#60#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../prova_collisioni/c_rovescia_p.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vermicello.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="e#495#508#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/modifiche_gioco.py" />
     <entry file="file://$PROJECT_DIR$/prove4.py" />
     <entry file="file://$PROJECT_DIR$/Vermicello.py">
@@ -542,12 +572,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modifiche_gioco.py" />
-    <entry file="file://$PROJECT_DIR$/Vermicello.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Vermicello.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/prova_nemico.py" />
     <entry file="file://$PROJECT_DIR$/Variabili_prova_nemico.py" />
     <entry file="file:///usr/lib/python3/dist-packages/apt/__init__.py">
@@ -571,14 +595,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/prendimi10.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/prove4.py" />
     <entry file="file://$PROJECT_DIR$/modifiche_gioco.py" />
-    <entry file="file://$PROJECT_DIR$/Vermicello.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/modifiche_gioco.py" />
     <entry file="file://$PROJECT_DIR$/prove4.py" />
     <entry file="file://$PROJECT_DIR$/Vermicello.py">
@@ -589,12 +607,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modifiche_gioco.py" />
-    <entry file="file://$PROJECT_DIR$/Vermicello.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Vermicello.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/prova_nemico.py" />
     <entry file="file://$PROJECT_DIR$/Variabili_prova_nemico.py" />
     <entry file="file:///usr/lib/python3/dist-packages/apt/__init__.py">
@@ -610,9 +622,6 @@
           <caret line="63" column="14" selection-start-line="63" selection-start-column="9" selection-end-line="63" selection-end-column="14" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/prendimi10.png">
-      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/../bot.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -707,19 +716,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../prova_collisioni/c_rovescia_p.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Procfile">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Vermicello.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
@@ -728,6 +724,18 @@
             <element signature="e#495#508#0" expanded="true" />
           </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../prova_collisioni/c_rovescia_p.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vermicello.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-162" />
       </provider>
     </entry>
   </component>

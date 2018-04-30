@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a4e674a6-615a-4b93-b757-98d91cec402d" name="Default" comment="MODIFICA 8">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gioco.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gioco.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vermicello.py" beforeDir="false" afterPath="$PROJECT_DIR$/Vermicello.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-    </list>
+    <list default="true" id="a4e674a6-615a-4b93-b757-98d91cec402d" name="Default" comment="MODIFICA 8" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -138,7 +130,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="993" />
     <option name="y" value="25" />
     <option name="width" value="927" />
@@ -460,13 +452,12 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="25" width="1853" height="1055" extended-state="7" />
-    <editor active="true" />
+    <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32984293" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.1770891" side_tool="true" visible="true" weight="0.28416485" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.8229109" visible="true" weight="0.28416485" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.8229109" weight="0.28416485" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49363586" weight="0.014069264" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.32984293" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.4991699" weight="0.0" />

@@ -3,7 +3,7 @@
 
 #-----------------------------------------------------------------------------------------#
 # Il gioco è stato scritto da uno che non ne sa nulla di programmazione, che sarei io :)  #
-# Il gioco funziona con python27                                                          #
+# Il gioco funziona con python36                                                          #
 # Buon divertimento, se vi diverte, lo spero, aaaaa                                       #
 #-----------------------------------------------------------------------------------------#
 
@@ -36,7 +36,7 @@ cattura = pygame.mixer.Sound('cattura1.wav')
 # ------------------------------------------------------------------------------------
 # avviso
 # ------------------------------------------------------------------------------------
-avviso = pygame.mixer.Sound('allarme.wav')
+avviso = pygame.mixer.Sound('Allarme.wav')
 # ------------------------------------------------------------------------------------
 # suono collisione muro
 # ------------------------------------------------------------------------------------
